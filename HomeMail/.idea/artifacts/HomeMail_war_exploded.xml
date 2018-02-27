@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="HomeMail:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/HomeMail_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="HomeMail/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="HomeMail" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
