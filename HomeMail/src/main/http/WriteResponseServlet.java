@@ -15,9 +15,12 @@ public class WriteResponseServlet extends BaseServlet {
     @Override
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String aim = req.getParameter("aim");
+        Writer writer = resp.getWriter();
         if (AIM_CLAP.equals(aim)){
             int RID = Integer.parseInt(req.getParameter("RID"));
             ResponseDBHelper.getInstance().clap(RID);
+            writer.write("success");
+            writer.flush();
         }else if (AIM_ADD.equals(aim)){
             String text = req.getParameter("text");
             String WXID = req.getParameter("WXID");
@@ -33,8 +36,6 @@ public class WriteResponseServlet extends BaseServlet {
             r.setBriefContent(text);
             ResponseDBHelper.getInstance().add(r);
             QuestionDBHelper.getInstance().addResp(QID);
-
-            Writer writer = resp.getWriter();
             writer.write("success");
             writer.flush();
         }

@@ -151,4 +151,16 @@ public class QuestionDBHelper extends DBHelper {
             e.printStackTrace();
         }
     }
+    public void edit(int QID,String context){
+        try {
+            PreparedStatement stat = this.getConn().prepareStatement(
+                    "Update "+this.TABLE_NAME+" Set QContext =? Where QID = ?"
+            );
+            stat.setString(1,context);
+            stat.setInt(2,QID);
+            stat.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

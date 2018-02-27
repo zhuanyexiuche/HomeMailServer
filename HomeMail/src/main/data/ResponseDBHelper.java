@@ -134,4 +134,23 @@ public class ResponseDBHelper extends DBHelper{
             e.printStackTrace();
         }
     }
+    public void edit(int RID,String content){
+        String briefCont;
+        if (content.length()<=Response.BRIEF_LENGTH)
+            briefCont = content;
+        else
+            briefCont = content.substring(0,Response.BRIEF_LENGTH)+"...";
+        try {
+            PreparedStatement stat = this.getConn().prepareStatement(
+                    "Update "+this.TABLE_NAME+" Set RContent = ?,RBriefContent = ? Where RID = ?"
+            );
+            stat.setString(1,content);
+            stat.setString(2,briefCont);
+            stat.setInt(3,RID);
+            stat.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

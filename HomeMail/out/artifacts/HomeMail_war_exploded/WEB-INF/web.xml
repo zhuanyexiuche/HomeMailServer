@@ -15,6 +15,10 @@
         <servlet-name>WriteResponseServlet</servlet-name>
         <servlet-class>main.http.WriteResponseServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>WriteQuestionServlet</servlet-name>
+        <servlet-class>main.http.WriteQuestionServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ReadQuestionServlet</servlet-name>
         <!--浏览器中输入的url，可以随意取名  但是注意加"/" -->
@@ -27,5 +31,9 @@
     <servlet-mapping>
         <servlet-name>WriteResponseServlet</servlet-name>
         <url-pattern>/writeResponse</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WriteQuestionServlet</servlet-name>
+        <url-pattern>/writeQuestion</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -4,7 +4,7 @@ public class Response {
     private int ID,QID,commentCount,clapCount;
     private String WXID,content,briefContent;
     private boolean NiMing,isDeleted;
-    public final static int BRIEF_LENGTH = 8;
+    public final static int BRIEF_LENGTH = 24;
 
     public int getID() {
         return ID;
