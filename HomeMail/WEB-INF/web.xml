@@ -19,6 +19,17 @@
         <servlet-name>WriteQuestionServlet</servlet-name>
         <servlet-class>main.http.WriteQuestionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>WriteClapServlet</servlet-name>
+        <servlet-class>main.http.WriteClapServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadClapServlet</servlet-name>
+        <servlet-class>main.http.ReadClapServlet</servlet-class>
+    </servlet>
+
+
+
     <servlet-mapping>
         <servlet-name>ReadQuestionServlet</servlet-name>
         <!--浏览器中输入的url，可以随意取名  但是注意加"/" -->
@@ -35,5 +46,13 @@
     <servlet-mapping>
         <servlet-name>WriteQuestionServlet</servlet-name>
         <url-pattern>/writeQuestion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WriteClapServlet</servlet-name>
+        <url-pattern>/writeClap</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReadClapServlet</servlet-name>
+        <url-pattern>/readClap</url-pattern>
     </servlet-mapping>
 </web-app>

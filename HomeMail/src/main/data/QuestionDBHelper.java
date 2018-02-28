@@ -125,7 +125,7 @@ public class QuestionDBHelper extends DBHelper {
             e.printStackTrace();
         }
     }
-    protected void clap(int QID){
+    protected void clap(int QID,int delta){
         int nowCount=-1;
         try {
             PreparedStatement stat1 = this.getConn().prepareStatement(
@@ -144,7 +144,7 @@ public class QuestionDBHelper extends DBHelper {
             PreparedStatement stat2 = this.getConn().prepareStatement(
                     "Update "+this.TABLE_NAME+" set QClapCount =? Where QID =?"
             );
-            stat2.setInt(1,nowCount+1);
+            stat2.setInt(1,nowCount+delta);
             stat2.setInt(2,QID);
             stat2.execute();
         } catch (SQLException e) {

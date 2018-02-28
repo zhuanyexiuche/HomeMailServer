@@ -105,7 +105,7 @@ public class ResponseDBHelper extends DBHelper{
             return res;
         }
     }
-    public void clap(int RID){
+    public void clap(int RID,int delta){
         int nowCount =-1;
         int QID = -1;
         try {
@@ -126,10 +126,10 @@ public class ResponseDBHelper extends DBHelper{
             PreparedStatement stat2 = this.getConn().prepareStatement(
                     "Update "+this.TABLE_NAME+" Set RClapCount = ? Where RID = ?"
             );
-            stat2.setInt(1,nowCount+1);
+            stat2.setInt(1,nowCount+delta);
             stat2.setInt(2,RID);
             stat2.execute();
-            QuestionDBHelper.getInstance().clap(QID);
+            QuestionDBHelper.getInstance().clap(QID,delta);
         } catch (SQLException e) {
             e.printStackTrace();
         }
