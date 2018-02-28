@@ -37,9 +37,23 @@ public class ResponseDBHelper extends DBHelper{
     }
     public void delete(int ID){
         try {
-            PreparedStatement stat = this.getConn().prepareStatement(
-                    "Update "+this.TABLE_NAME+" set RIsDeleted = true where "+this.PRIMARY_KEY+"="+ID
+            int QID =-1;
+            int clapCount =-1;
+            PreparedStatement stat1 = this.getConn().prepareStatement(
+                    "Select RQID,RClapCount From "+this.TABLE_NAME+" Where RID =?"
             );
+            stat1.setInt(1,ID);
+            ResultSet set = stat1.executeQuery();
+            while (set.next()){
+                QID = set.getInt("RQID");
+                clapCount = set.getInt("RClapCount");
+            }
+            QuestionDBHelper.getInstance().addResp(QID,-1);
+            QuestionDBHelper.getInstance().clap(QID,-clapCount);
+            PreparedStatement stat = this.getConn().prepareStatement(
+                    "Update "+this.TABLE_NAME+" set RIsDeleted = true where "+this.PRIMARY_KEY+"=?"
+            );
+            stat.setInt(1,ID);
             stat.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -92,7 +106,7 @@ public class ResponseDBHelper extends DBHelper{
         ArrayList<Response> res = new ArrayList<>();
         try {
             PreparedStatement stat = this.getConn().prepareStatement(
-                    "Select RID,RQID,RWXID,RNiMing,RBriefContent,RCommentCount,RClapCount From "+this.TABLE_NAME+" Where RQID = ?"
+                    "Select RID,RQID,RWXID,RNiMing,RBriefContent,RCommentCount,RClapCount From "+this.TABLE_NAME+" Where RQID = ?&&RIsDeleted=false"
             );
             stat.setInt(1,QID);
             ResultSet set = stat.executeQuery();

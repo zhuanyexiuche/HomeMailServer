@@ -99,7 +99,7 @@ public class QuestionDBHelper extends DBHelper {
         }
         return res;
     }
-    public void addResp(int QID){
+    public void addResp(int QID,int delta){
         int nowCount=-1;
         try {
             PreparedStatement stat1 = this.getConn().prepareStatement(
@@ -118,7 +118,7 @@ public class QuestionDBHelper extends DBHelper {
             PreparedStatement stat2 = this.getConn().prepareStatement(
                     "Update "+this.TABLE_NAME+" set QRespCount =? Where QID =?"
             );
-            stat2.setInt(1,nowCount+1);
+            stat2.setInt(1,nowCount+delta);
             stat2.setInt(2,QID);
             stat2.execute();
         } catch (SQLException e) {

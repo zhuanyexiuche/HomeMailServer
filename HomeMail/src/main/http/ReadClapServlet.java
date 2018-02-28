@@ -16,9 +16,9 @@ public class ReadClapServlet extends BaseServlet {
         Clap c = new Clap();
         c.setRID(RID);
         c.setWXID(WXID);
-        int result = ClapDBHelper.getInstance().findClap(c);
+        boolean result = ClapDBHelper.getInstance().claped(c);
         Writer writer = resp.getWriter();
-        writer.write(result!=-1?"true":"false");
+        writer.write(result?"true":"false");
         writer.flush();
     }
 }
