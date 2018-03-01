@@ -14,8 +14,15 @@ public class ReadQuestionServlet extends BaseServlet{
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Writer writer = resp.getWriter();
         boolean brief = req.getParameter("brief").equals("true");
+        boolean search = req.getParameter("search")!=null;
         if (brief){
-            ArrayList<Question> list = QuestionDBHelper.getInstance().getAllBrief();
+            ArrayList<Question> list;
+            if (search){
+                String word = req.getParameter("keyWord");
+                list = QuestionDBHelper.getInstance().getAllBrief(word);
+            }else{
+                list = QuestionDBHelper.getInstance().getAllBrief();
+            }
             String cont = "[";
             for (Question q:list){
                 cont+="{";

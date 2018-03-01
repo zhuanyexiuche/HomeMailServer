@@ -99,6 +99,23 @@ public class QuestionDBHelper extends DBHelper {
         }
         return res;
     }
+    public ArrayList<Question> getAllBrief(String keyWord){
+        ArrayList<Question> res = new ArrayList<>();
+        try {
+            PreparedStatement stat = this.getConn().prepareStatement(
+                    "Select QID,QTopic,QRespCount,QClapCount From "+this.TABLE_NAME+" where QIsDeleted = false&&QTopic like ?"
+            );
+            stat.setString(1,"%"+keyWord+"%");
+            ResultSet set = stat.executeQuery();
+            while (set.next()){
+                res.add(makeBrief(set));
+            }
+            return res;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return res;
+    }
     public void addResp(int QID,int delta){
         int nowCount=-1;
         try {
