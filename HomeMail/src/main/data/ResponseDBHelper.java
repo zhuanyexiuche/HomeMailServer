@@ -11,11 +11,11 @@ import java.util.ArrayList;
 
 public class ResponseDBHelper extends DBHelper{
     /*
-    1:RID int(auto)  2:RQID int 3:RWXID String 4:RNiMing boolean
-    5:RContent String 6:RBriefContent String 7:RCommentCount int
-    8:RClapCount int 9:RIsDeleted boolean
+    1:RID int(auto)  2:RQID int 3:RWXID String 4:RWXNickName String 5:RAvatarUrl String
+    6:RNiMing boolean 7:RContent String 8:RBriefContent String 9:RCommentCount int
+    10:RClapCount int 11:RIsDeleted boolean
      */
-    private ResponseDBHelper(){super("Response","RID",9);}
+    private ResponseDBHelper(){super("Response","RID",11);}
     private static ResponseDBHelper instance = new ResponseDBHelper();
     public static ResponseDBHelper getInstance(){return instance;}
     public void add(Response r){
@@ -24,12 +24,14 @@ public class ResponseDBHelper extends DBHelper{
             stat.setNull(1, Types.INTEGER);
             stat.setInt(2,r.getQID());
             stat.setString(3,r.getWXID());
-            stat.setBoolean(4,r.isNiMing());
-            stat.setString(5,r.getContent());
-            stat.setString(6,r.getBriefContent());
-            stat.setInt(7,r.getCommentCount());
-            stat.setInt(8,r.getClapCount());
-            stat.setBoolean(9,r.isDeleted());
+            stat.setString(4,r.getWXNickName());
+            stat.setString(5,r.getAvatarUrl());
+            stat.setBoolean(6,r.isNiMing());
+            stat.setString(7,r.getContent());
+            stat.setString(8,r.getBriefContent());
+            stat.setInt(9,r.getCommentCount());
+            stat.setInt(10,r.getClapCount());
+            stat.setBoolean(11,r.isDeleted());
             stat.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -69,6 +71,8 @@ public class ResponseDBHelper extends DBHelper{
             q.setBriefContent(set.getString("RBriefContent"));
             q.setClapCount(set.getInt("RClapCount"));
             q.setCommentCount(set.getInt("RCommentCount"));
+            q.setAvatarUrl(set.getString("RAvatarUrl"));
+            q.setWXNickName(set.getString("RWXNickName"));
         } catch (SQLException e) {
             e.printStackTrace();
         }finally{
@@ -106,7 +110,7 @@ public class ResponseDBHelper extends DBHelper{
         ArrayList<Response> res = new ArrayList<>();
         try {
             PreparedStatement stat = this.getConn().prepareStatement(
-                    "Select RID,RQID,RWXID,RNiMing,RBriefContent,RCommentCount,RClapCount From "+this.TABLE_NAME+" Where RQID = ?&&RIsDeleted=false"
+                    "Select RID,RQID,RWXID,RNiMing,RBriefContent,RCommentCount,RClapCount,RAvatarUrl,RWXNickName From "+this.TABLE_NAME+" Where RQID = ?&&RIsDeleted=false"
             );
             stat.setInt(1,QID);
             ResultSet set = stat.executeQuery();

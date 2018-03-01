@@ -23,6 +23,8 @@ public class ReadResponseServlet extends BaseServlet {
                 cont+="\"ID\":"+r.getID()+",";
                 cont+="\"QID\":"+r.getQID()+",";
                 cont+="\"WXID\":"+"\""+r.getWXID()+"\""+",";
+                cont+="\"WXNickName\":"+"\""+r.getWXNickName()+"\""+",";
+                cont+="\"avatarUrl\":"+"\""+r.getAvatarUrl()+"\""+",";
                 cont+="\"NiMing\":"+r.isNiMing()+",";
                 cont+="\"briefContent\":"+"\""+r.getBriefContent()+"\""+",";
                 cont+="\"commentCount\":"+r.getCommentCount()+",";
@@ -40,6 +42,8 @@ public class ReadResponseServlet extends BaseServlet {
             cont+="\"ID\":"+r.getID()+",";
             cont+="\"QID\":"+r.getQID()+",";
             cont+="\"WXID\":"+"\""+r.getWXID()+"\""+",";
+            cont+="\"WXNickName\":"+"\""+r.getWXNickName()+"\""+",";
+            cont+="\"avatarUrl\":"+"\""+r.getAvatarUrl()+"\""+",";
             cont+="\"NiMing\":"+r.isNiMing()+",";
             cont+="\"content\":"+"\""+r.getContent()+"\""+",";
             cont+="\"briefContent\":"+"\""+r.getBriefContent()+"\""+",";

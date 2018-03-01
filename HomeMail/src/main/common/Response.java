@@ -2,9 +2,25 @@ package main.common;
 
 public class Response {
     private int ID,QID,commentCount,clapCount;
-    private String WXID,content,briefContent;
+    private String WXID,WXNickName,content,briefContent,avatarUrl;
     private boolean NiMing,isDeleted;
     public final static int BRIEF_LENGTH = 24;
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
+
+    public String getWXNickName() {
+        return WXNickName;
+    }
+
+    public void setWXNickName(String WXNickName) {
+        this.WXNickName = WXNickName;
+    }
 
     public int getID() {
         return ID;

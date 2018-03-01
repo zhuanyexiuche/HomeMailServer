@@ -27,6 +27,10 @@
         <servlet-name>ReadClapServlet</servlet-name>
         <servlet-class>main.http.ReadClapServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReadOpenIDServlet</servlet-name>
+        <servlet-class>main.http.ReadOpenIDServlet</servlet-class>
+    </servlet>
 
 
 
@@ -54,5 +58,9 @@
     <servlet-mapping>
         <servlet-name>ReadClapServlet</servlet-name>
         <url-pattern>/readClap</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReadOpenIDServlet</servlet-name>
+        <url-pattern>/readOpenID</url-pattern>
     </servlet-mapping>
 </web-app>

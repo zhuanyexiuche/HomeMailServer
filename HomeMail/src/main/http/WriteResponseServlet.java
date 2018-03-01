@@ -22,7 +22,9 @@ public class WriteResponseServlet extends BaseServlet {
             int QID = Integer.parseInt(req.getParameter("QID"));
             System.out.println("add");
             String WXID = req.getParameter("WXID");
+            String WXNickName = req.getParameter("nickName");
             String text = req.getParameter("text");
+            String avatarUrl = req.getParameter("avatarUrl");
             Response r = new Response();
             r.setContent(text);
             r.setClapCount(0);
@@ -30,6 +32,8 @@ public class WriteResponseServlet extends BaseServlet {
             r.setNiMing(false);
             r.setQID(QID);
             r.setWXID(WXID);
+            r.setWXNickName(WXNickName);
+            r.setAvatarUrl(avatarUrl);
             r.setDeleted(false);
             r.setBriefContent(text);
             ResponseDBHelper.getInstance().add(r);
