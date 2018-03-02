@@ -12,7 +12,7 @@ public class WriteQuestionServlet extends BaseServlet {
     @Override
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String topic = req.getParameter("topic");
-        String context = req.getParameter("context");
+        String context = req.getParameter("context").replace("\n","\\n");
         Question q = new Question();
         q.setClapCount(0);
         q.setContext(context);

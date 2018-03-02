@@ -73,6 +73,7 @@ public class ResponseDBHelper extends DBHelper{
             q.setCommentCount(set.getInt("RCommentCount"));
             q.setAvatarUrl(set.getString("RAvatarUrl"));
             q.setWXNickName(set.getString("RWXNickName"));
+
         } catch (SQLException e) {
             e.printStackTrace();
         }finally{

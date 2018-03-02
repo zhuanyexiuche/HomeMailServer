@@ -23,7 +23,7 @@ public class WriteResponseServlet extends BaseServlet {
             System.out.println("add");
             String WXID = req.getParameter("WXID");
             String WXNickName = req.getParameter("nickName");
-            String text = req.getParameter("text");
+            String text = req.getParameter("text").replace("\n","\\n");
             String avatarUrl = req.getParameter("avatarUrl");
             Response r = new Response();
             r.setContent(text);
