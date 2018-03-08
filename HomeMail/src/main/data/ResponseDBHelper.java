@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ResponseDBHelper extends DBHelper{
     /*
@@ -118,6 +119,7 @@ public class ResponseDBHelper extends DBHelper{
             while (set.next()){
                 res.add(makeBrief(set));
             }
+//            Collections.reverse(res);
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {

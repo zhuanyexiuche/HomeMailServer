@@ -31,6 +31,14 @@
         <servlet-name>ReadOpenIDServlet</servlet-name>
         <servlet-class>main.http.ReadOpenIDServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>WriteSecretServlet</servlet-name>
+        <servlet-class>main.http.WriteSecretServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadSecretServlet</servlet-name>
+        <servlet-class>main.http.ReadSecretServlet</servlet-class>
+    </servlet>
 
 
 
@@ -62,5 +70,13 @@
     <servlet-mapping>
         <servlet-name>ReadOpenIDServlet</servlet-name>
         <url-pattern>/readOpenID</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WriteSecretServlet</servlet-name>
+        <url-pattern>/writeSecret</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReadSecretServlet</servlet-name>
+        <url-pattern>/readSecret</url-pattern>
     </servlet-mapping>
 </web-app>
