@@ -39,6 +39,14 @@
         <servlet-name>ReadSecretServlet</servlet-name>
         <servlet-class>main.http.ReadSecretServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>WriteSecretCommentServlet</servlet-name>
+        <servlet-class>main.http.WriteSecretCommentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadSecretCommentServlet</servlet-name>
+        <servlet-class>main.http.ReadSecretCommentServlet</servlet-class>
+    </servlet>
 
 
 
@@ -78,5 +86,13 @@
     <servlet-mapping>
         <servlet-name>ReadSecretServlet</servlet-name>
         <url-pattern>/readSecret</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WriteSecretCommentServlet</servlet-name>
+        <url-pattern>/writeSecretComment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReadSecretCommentServlet</servlet-name>
+        <url-pattern>/readSecretComment</url-pattern>
     </servlet-mapping>
 </web-app>

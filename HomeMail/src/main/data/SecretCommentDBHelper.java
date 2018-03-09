@@ -13,6 +13,7 @@ public class SecretCommentDBHelper extends DBHelper{
     1:SID int 2:SContext:String 3:SBriefContext String
     4:SSID int 5:SIsDeleted boolean
      */
+    public static final int MAX_LENGTH = 24;
     private SecretCommentDBHelper(){super("SecretComment","SID",5);}
     private static SecretCommentDBHelper instance = new SecretCommentDBHelper();
     public static SecretCommentDBHelper getInstance(){return instance;}
@@ -25,6 +26,7 @@ public class SecretCommentDBHelper extends DBHelper{
             stat.setInt(4,r.getSID());
             stat.setBoolean(5,false);
             stat.execute();
+            SecretDBHelper.getInstance().resp(r.getSID(),1);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -53,7 +55,7 @@ public class SecretCommentDBHelper extends DBHelper{
     private SecretComment makeBrief(ResultSet set){
         SecretComment q = new SecretComment();
         try {
-            q.setID(set.getInt("RID"));
+            q.setID(set.getInt("SID"));
            q.setSID(set.getInt("SSID"));
            q.setContext(set.getString("SContext"));
            q.setBriefContext(set.getString("SBriefContext"));
@@ -106,6 +108,13 @@ public class SecretCommentDBHelper extends DBHelper{
             e.printStackTrace();
         }finally {
             return res;
+        }
+    }
+    public static String getBrief(String context){
+        if (context.length()<MAX_LENGTH){
+            return context;
+        }else{
+            return context.substring(0,MAX_LENGTH)+"...";
         }
     }
 }
