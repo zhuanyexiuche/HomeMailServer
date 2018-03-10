@@ -66,14 +66,7 @@ public class SecretCommentDBHelper extends DBHelper{
         }
     }
     private SecretComment make(ResultSet set){
-        SecretComment q = makeBrief(set);
-        try {
-            q.setContext(set.getString("SContext"));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally{
-            return q;
-        }
+        return makeBrief(set);
     }
     public SecretComment getOneFull(int SID){
         SecretComment r = null;
@@ -96,7 +89,7 @@ public class SecretCommentDBHelper extends DBHelper{
         ArrayList<SecretComment> res = new ArrayList<>();
         try {
             PreparedStatement stat = this.getConn().prepareStatement(
-                    "Select SID,SBriefContext,SSID From "+this.TABLE_NAME+" Where SSID = ?&&SIsDeleted=false"
+                    "Select SID,SBriefContext,SContext,SSID From "+this.TABLE_NAME+" Where SSID = ?&&SIsDeleted=false"
             );
             stat.setInt(1,SSID);
             ResultSet set = stat.executeQuery();

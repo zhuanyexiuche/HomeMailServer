@@ -22,11 +22,14 @@ public class ReadSecretCommentServlet extends BaseServlet {
                 cont+="{";
                 cont+="\"ID\":"+comment.getID()+",";
                 cont+="\"SID\":"+comment.getSID()+",";
-                cont+="\"briefContext\":"+"\""+comment.getBriefContext()+"\"";
+                cont+="\"briefContext\":"+"\""+comment.getBriefContext()+"\""+",";
+                cont+="\"context\":"+"\""+comment.getContext()+"\"";
                 cont+="},";
             }
             if (list.size()!=0){
                 cont = cont.substring(0,cont.length()-1)+"]";
+            }else{
+                cont+="]";
             }
             writer.write(cont);
             writer.flush();

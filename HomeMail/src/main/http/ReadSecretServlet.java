@@ -40,7 +40,7 @@ public class ReadSecretServlet extends BaseServlet {
             writer.flush();
 
         }else{
-            int ID = Integer.parseInt(req.getParameter("QID"));
+            int ID = Integer.parseInt(req.getParameter("SID"));
             Secret q = SecretDBHelper.getInstance().getOneFull(ID);
             String cont="{";
             cont+="\"ID\":"+q.getID()+",";

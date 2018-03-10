@@ -37,7 +37,7 @@ public class SecretDBHelper extends DBHelper {
             s.setID(set.getInt("SID"));
             s.setBriefContext(set.getString("SBriefContext"));
             s.setRespCount(set.getInt("SRespCount"));
-            s.setDeleted(set.getBoolean("SIsDeleted"));
+//            s.setDeleted(set.getBoolean("SIsDeleted"));
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
