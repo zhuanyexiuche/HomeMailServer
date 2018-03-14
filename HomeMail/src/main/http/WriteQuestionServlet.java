@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.Writer;
 
 public class WriteQuestionServlet extends BaseServlet {
-    @Override
+
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String topic = req.getParameter("topic");
         String context = req.getParameter("context").replace("\n","\\n");

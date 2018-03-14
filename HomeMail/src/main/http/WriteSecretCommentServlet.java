@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class WriteSecretCommentServlet extends BaseServlet{
-    @Override
+
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         boolean delete = req.getParameter("delete")!=null;
         if (delete){

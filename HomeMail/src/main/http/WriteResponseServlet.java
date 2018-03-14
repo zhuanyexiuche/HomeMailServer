@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.Writer;
 
 public class WriteResponseServlet extends BaseServlet {
-    @Override
+
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Writer writer = resp.getWriter();
         String deleteFlag =req.getParameter("delete");

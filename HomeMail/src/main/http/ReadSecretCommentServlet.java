@@ -10,7 +10,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 
 public class ReadSecretCommentServlet extends BaseServlet {
-    @Override
+
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         boolean brief = "true".equals(req.getParameter("brief"));
         Writer writer = resp.getWriter();

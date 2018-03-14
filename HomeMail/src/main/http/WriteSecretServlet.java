@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.Writer;
 
 public class WriteSecretServlet extends BaseServlet {
-    @Override
+
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String context = req.getParameter("context").replace("\n","\\n");
         Secret q = new Secret();

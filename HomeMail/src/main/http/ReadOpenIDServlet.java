@@ -10,7 +10,7 @@ public class ReadOpenIDServlet extends BaseServlet {
     private final static String appid = "wxfd429d0571e87aa2";
     private final static String secret="94ec41e5faa8ec7f2b0866e222b4f2df";
     private final static String requestUrl="https://api.weixin.qq.com/sns/jscode2session";
-    @Override
+
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         URL realUrl = new URL(requestUrl);
         URLConnection conn = realUrl.openConnection();

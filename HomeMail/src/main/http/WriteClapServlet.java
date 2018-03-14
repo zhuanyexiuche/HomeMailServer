@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class WriteClapServlet extends BaseServlet {
-    @Override
+
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         int RID = Integer.parseInt(req.getParameter("RID"));
         String WXID = req.getParameter("WXID");

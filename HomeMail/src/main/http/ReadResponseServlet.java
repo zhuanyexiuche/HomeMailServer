@@ -10,7 +10,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 
 public class ReadResponseServlet extends BaseServlet {
-    @Override
+
     void work(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Writer writer = resp.getWriter();
         boolean brief = "true".equals(req.getParameter("brief"));
