@@ -24,7 +24,6 @@
         <fileset dir="${lib.path}">
             <include name="**/*.jar"/>
         </fileset>
-
         <pathelement path="${build.path}"/>
     </path>
 
@@ -53,11 +52,14 @@
     <!-- =================================================================== -->
     <!-- 执行测试案例 -->
     <!-- =================================================================== -->
+
+
+
     <target name="junit" depends="compile">
-        <junit printsummary="true" fork="true">
+        <junit printsummary="true" fork="true"  >
             <formatter type="xml" usefile="true"/>
 
-            <classpath refid="compile.path"/>
+            <classpath refid="compile.path" />
 
             <batchtest fork="on" todir="${report.path}" haltonfailure="no">
                 <fileset dir="${build.path}">

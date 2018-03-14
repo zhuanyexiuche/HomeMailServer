@@ -11,22 +11,22 @@ import java.time.LocalDateTime;
  * Created by DELL on 2017/11/25.
  */
 public abstract class DBHelper {
-    // 定义数据库驱动程序
+
     private static final String DBDRIVER = "com.mysql.jdbc.Driver";
-    //地址
+
     public static final String DBURL = "jdbc:mysql://47.100.32.199:3306/HomeMail";
     private static final String USER = "calabash";
     private static final String PASS = "Wang1997";
-    //SQL语句
+
     private  String INSERT_SQL;
     private String DELETE_SQL;
     private String SELECT_SQL;
     private String UPDATE_SQL;
-    //数据库表单属性
+
     protected final String TABLE_NAME;
     private final int TOTCOLUMN;
     protected final String PRIMARY_KEY;
-    //数据库连接
+
     private Connection conn = null;
     //Statement
     private PreparedStatement INSERT_STAT=null;
@@ -41,11 +41,7 @@ public abstract class DBHelper {
         prepareSQL();
     }
 
-    /**
-     * 格式转换函数
-     * @param date 日期
-     * @return 特定格式字符串（等长）
-     */
+
     protected String Date2String(LocalDate date){
         String res = "";
         res+= date.getYear()+"-";
@@ -56,11 +52,7 @@ public abstract class DBHelper {
         return res;
     }
 
-    /**
-     * 格式转换函数
-     * @param time 日期
-     * @return 特定格式字符串（等长）
-     */
+
     protected String DateTime2String (LocalDateTime time){
         String res = "";
         res+= time.getYear()+"-";
@@ -80,22 +72,14 @@ public abstract class DBHelper {
         return res;
     }
 
-    /**
-     * Date2String 解析函数
-     * @param s
-     * @return
-     */
+
     protected LocalDate String2Date(String s){
         String[] temp = s.split("-");
         LocalDate res = LocalDate.of(Integer.parseInt(temp[0]),Integer.parseInt(temp[1]),Integer.parseInt(temp[2]));
         return res;
     }
 
-    /**
-     * DateTime2String解析函数
-     * @param s
-     * @return
-     */
+
     protected LocalDateTime String2DateTime(String s) {
         String[] temp = s.split("-");
         int[] temp2 = new int[temp.length];
@@ -106,9 +90,6 @@ public abstract class DBHelper {
         return res;
     }
 
-    /**
-     *     制作SQL语句
-     */
     private void prepareSQL(){
         INSERT_SQL="INSERT INTO "+TABLE_NAME+" VALUE (";
         for (int i=0;i<TOTCOLUMN-1;i++){
