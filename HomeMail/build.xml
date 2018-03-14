@@ -7,7 +7,7 @@
     <!-- 源代码src路径 -->
     <property name="src.path" value="src/main"/>
     <!-- 单元测试代码路径 -->
-    <property name="test.path" value="web/classes"/>
+    <property name="test.path" value="src/test"/>
     <!-- 编译文件class路径 -->
     <property name="build.path" value="build"/>
     <!-- jar包路径 -->
