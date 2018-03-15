@@ -54,7 +54,7 @@
     <!-- =================================================================== -->
 
 
-
+<!--
     <target name="junit" depends="compile">
         <junit printsummary="true" fork="true"  >
             <formatter type="xml" usefile="true"/>
@@ -68,9 +68,10 @@
             </batchtest>
         </junit>
     </target>
-
+-->
+    <!--
     <target name="junit-report" depends="junit">
-        <!-- 产生单元测试报表文档 -->
+        
         <junitreport todir="${report.path}">
             <fileset dir="${report.path}">
                 <include name="TEST-*.xml" />
@@ -84,10 +85,10 @@
         <jar jarfile="${dist.path}/AntDemo.jar">
             <fileset dir="${build.path}">
 
-                <!--除去test文件-->
+                
                 <exclude name="**/*Test.class"/>
             </fileset>
         </jar>
     </target>
-
+-->
 </project>
