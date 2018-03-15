@@ -2,6 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.calabash_boy</groupId>
     <artifactId>myapp</artifactId>
+    <version>1.0.0</version>
     <reporting>
         <plugins>
             <plugin>
