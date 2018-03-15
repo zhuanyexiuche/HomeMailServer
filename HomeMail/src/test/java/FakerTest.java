@@ -1,15 +1,15 @@
 package test.java;
 
 import org.junit.Test;
-
+import static org.junit.Assert.*;
 public class FakerTest {
     @Test
     public void test(){
-        assert 1==2;
+        assertTrue(1==1);
 
     }
     @Test
     public void test2(){
-        assert 1==1;
+        assertTrue(1==1);
     }
 }

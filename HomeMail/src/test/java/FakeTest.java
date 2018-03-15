@@ -7,7 +7,6 @@ import org.junit.Test;
 public class FakeTest {
     @Test
     public void test(){
-        assertTrue(1==2);
-        assert(1==2);
+        assertTrue(2==2);
     }
 }

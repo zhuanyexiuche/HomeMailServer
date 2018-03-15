@@ -56,9 +56,12 @@
             <build>
                 <plugins>
                     <plugin>
+                        <!-- 以下为cobertura插件信息-->
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>cobertura-maven-plugin</artifactId>
                         <version>2.7</version>
+                        <!-- 以上为cobertura插件信息-->
+                        <!-- 以下为jenkins导出xml报告用-->
                         <configuration>
                             <formats>
                                 <format>xml</format>
@@ -72,6 +75,7 @@
                                 </goals>
                             </execution>
                         </executions>
+                        <!-- 以上为jenkins导出xml报告用>-->
                     </plugin>
                 </plugins>
             </build>
