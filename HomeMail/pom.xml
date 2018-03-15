@@ -24,10 +24,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugns</groupId>
-                <artifactId>maven-compiler</artifactId>
-            </plugin>
 
         </plugins>
         <sourceDirectory>src/main</sourceDirectory>
