@@ -15,7 +15,15 @@
                     <source>8</source>
                     <target>8</target>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                        <version>4.12</version>
+                    </dependency>
+                </dependencies>
             </plugin>
+
         </plugins>
         <sourceDirectory>src/main</sourceDirectory>
         <outputDirectory>web/classes/main</outputDirectory>
@@ -33,7 +41,9 @@
                 <directory>web/lib</directory>
             </testResource>
         </testResources>
+
     </build>
+
     <reporting>
         <plugins>
             <plugin>
