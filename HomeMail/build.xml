@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="AntDemo" default="junit-report" basedir=".">
+<project name="junit-test" default="junit-report" basedir=".">
     <!-- =================================================================== -->
     <!-- 变量设置  -->
     <!-- =================================================================== -->
@@ -15,7 +15,7 @@
     <!-- lib包路径 -->
     <property name="lib.path" value="web/lib"/>
     <!-- 生成报告junit4.xml路径 -->
-    <property name="report.path" value="report"/>
+    <property name="report.path" value="report/junit"/>
 
     <!-- =================================================================== -->
     <!-- 设置classpath -->
