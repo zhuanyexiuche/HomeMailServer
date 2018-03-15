@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="AntDemo" default="test" basedir=".">
+<project name="AntDemo" default="compile" basedir=".">
     <!-- =================================================================== -->
     <!-- 变量设置  -->
     <!-- =================================================================== -->
