@@ -31,24 +31,26 @@
         <pathelement path="${build.path}"/>
     </path>
 
+    <!-- =================================================================== -->
+    <!-- 清除历史编译class -->
+    <!-- =================================================================== -->
+    <target name="clean" description="clean" >
+        <delete dir="${build.path}"/>
+        <delete dir="${report.path}"/>
+    </target>
+    
     <!-- 初始化 -->
-    <target name="init">
+    <target name="init" depends="clean">
         <mkdir dir="${build.path}"/>
         <mkdir dir="${report.path}"/>
     </target>
 
-    <!-- =================================================================== -->
-    <!-- 清除历史编译class -->
-    <!-- =================================================================== -->
-    <target name="clean" description="clean">
-        <delete dir="${build.path}"/>
-        <delete dir="${report.path}"/>
-    </target>
+
 
     <!-- =================================================================== -->
     <!-- 编译测试文件，初始化目录 -->
     <!-- =================================================================== -->
-    <target name="compile" depends="init">
+    <target name="compile" depends="clean">
         <javac srcdir="${src.path}" destdir="${build.path}"  classpathref="compile.path" includeantruntime="true"/>
         <javac srcdir="${test.path}" destdir="${build.path}"  classpathref="compile.path" includeantruntime="true"/>
     </target>
