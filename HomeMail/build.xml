@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="AntDemo" default="compile" basedir=".">
+<project name="AntDemo" default="junit-report" basedir=".">
     <!-- =================================================================== -->
     <!-- 变量设置  -->
     <!-- =================================================================== -->
-    <target name="testttttt">
-    </target>
+
     <!-- 源代码src路径 -->
     <property name="src.path" value="src/main"/>
     <!-- 单元测试代码路径 -->
@@ -24,10 +23,7 @@
     
     
     
-    
-    <!-- test-->
-    <target name ="test">
-    </target>
+
     <path id="compile.path">
         <fileset dir="${lib.path}">
             <include name="**/*.jar"/>
@@ -61,8 +57,6 @@
     <!-- 执行测试案例 -->
     <!-- =================================================================== -->
 
-
-<!--
     <target name="junit" depends="compile">
         <junit printsummary="true" fork="true"  >
             <formatter type="xml" usefile="true"/>
@@ -76,8 +70,8 @@
             </batchtest>
         </junit>
     </target>
--->
-    <!--
+
+
     <target name="junit-report" depends="junit">
         
         <junitreport todir="${report.path}">
@@ -98,5 +92,5 @@
             </fileset>
         </jar>
     </target>
--->
+
 </project>
