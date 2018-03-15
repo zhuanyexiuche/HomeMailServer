@@ -1,4 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.calabash_boy</groupId>
+    <artifactId>myapp</artifactId>
     <reporting>
         <plugins>
             <plugin>
