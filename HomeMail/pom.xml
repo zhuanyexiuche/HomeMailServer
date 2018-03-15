@@ -10,6 +10,18 @@
         <outputDirectory>web/classes/main</outputDirectory>
         <testOutputDirectory>web/classes/test</testOutputDirectory>
         <testSourceDirectory>src/test</testSourceDirectory>
+        <resources>
+            <resource>
+                <targetPath>web/lib</targetPath>
+                <directory>web/lib</directory>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <targetPath>web/lib</targetPath>
+                <directory>web/lib</directory>
+            </testResource>
+        </testResources>
     </build>
     <reporting>
         <plugins>
