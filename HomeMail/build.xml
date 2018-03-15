@@ -38,7 +38,7 @@
         <delete dir="${build.path}"/>
         <delete dir="${report.path}"/>
     </target>
-    
+
     <!-- 初始化 -->
     <target name="init" depends="clean">
         <mkdir dir="${build.path}"/>
@@ -50,7 +50,7 @@
     <!-- =================================================================== -->
     <!-- 编译测试文件，初始化目录 -->
     <!-- =================================================================== -->
-    <target name="compile" depends="clean">
+    <target name="compile" depends="init">
         <javac srcdir="${src.path}" destdir="${build.path}"  classpathref="compile.path" includeantruntime="true"/>
         <javac srcdir="${test.path}" destdir="${build.path}"  classpathref="compile.path" includeantruntime="true"/>
     </target>
