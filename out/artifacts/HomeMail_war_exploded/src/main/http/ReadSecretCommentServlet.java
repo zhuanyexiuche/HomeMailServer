@@ -23,7 +23,9 @@ public class ReadSecretCommentServlet extends BaseServlet {
                 cont+="\"ID\":"+comment.getID()+",";
                 cont+="\"SID\":"+comment.getSID()+",";
                 cont+="\"briefContext\":"+"\""+comment.getBriefContext()+"\""+",";
-                cont+="\"context\":"+"\""+comment.getContext()+"\"";
+                cont+="\"context\":"+"\""+comment.getContext()+"\""+",";
+                cont+="\"name\":"+"\""+comment.getName()+"\""+",";
+                cont+="\"mood\":"+"\""+comment.getMood()+"\"";
                 cont+="},";
             }
             if (list.size()!=0){
@@ -40,7 +42,9 @@ public class ReadSecretCommentServlet extends BaseServlet {
             cont+="\"ID\":"+comment.getID()+",";
             cont+="\"SID\":"+comment.getSID()+",";
             cont+="\"briefContext\":"+"\""+comment.getBriefContext()+"\""+",";
-            cont+="\"context\":"+"\""+comment.getContext()+"\"";
+            cont+="\"context\":"+"\""+comment.getContext()+"\""+",";
+            cont+="\"name\":"+"\""+comment.getName()+"\""+",";
+            cont+="\"mood\":"+"\""+comment.getMood()+"\"";
             cont+="}";
             writer.write(cont);
             writer.flush();

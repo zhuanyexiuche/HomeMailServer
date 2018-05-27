@@ -24,14 +24,13 @@ public abstract class DBHelper {
             public void run() {
                 while (true){
                     try {
-                        System.out.println("auto refresh");
                         PreparedStatement stat = getConn().prepareStatement(USELESS);
                         stat.execute();
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
                     try {
-                        Thread.sleep(2000);
+                        Thread.sleep(25200000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

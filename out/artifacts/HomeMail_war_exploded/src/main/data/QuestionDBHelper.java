@@ -51,6 +51,8 @@ public class QuestionDBHelper extends DBHelper {
             q.setTopic(set.getString("QTopic"));
             q.setRespCount(set.getInt("QRespCount"));
             q.setClapCount(set.getInt("QClapCount"));
+            String context =set.getString("Qcontext");
+            q.setContext(context.substring(0,Math.min(20,context.length()))+(context.length()>20?"...":""));
         } catch (SQLException e) {
             e.printStackTrace();
         }finally{
@@ -104,7 +106,7 @@ public class QuestionDBHelper extends DBHelper {
         ArrayList<Question> res = new ArrayList<>();
         try {
             PreparedStatement stat = this.getConn().prepareStatement(
-                    "Select QID,QTopic,QRespCount,QClapCount From "+this.TABLE_NAME+" where QIsDeleted = false&&QTopic like ?"
+                    "Select QID,QTopic,QContext,QRespCount,QClapCount From "+this.TABLE_NAME+" where QIsDeleted = false&&QTopic like ?"
             );
             stat.setString(1,"%"+keyWord+"%");
             ResultSet set = stat.executeQuery();

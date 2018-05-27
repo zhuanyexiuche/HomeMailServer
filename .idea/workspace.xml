@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="HomeMail:war" />
       <artifact name="HomeMail:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="157defbf-88aa-46aa-a8f9-ef542223847a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/HomeMail/HomeMail.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/HomeMail.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeMail/src/main/data/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/data/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeMail/out/artifacts/HomeMail_war/HomeMail_war.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeMail/src/main/common/SecretComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/common/SecretComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeMail/src/main/data/SecretCommentDBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/data/SecretCommentDBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeMail/src/main/http/ReadQuestionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/http/ReadQuestionServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeMail/src/main/http/ReadSecretCommentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/http/ReadSecretCommentServlet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,19 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BaseServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/BaseServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="ReadClapServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadClapServlet.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -43,40 +37,77 @@
       </file>
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HomeMail/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-902" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="ReadQuestionServlet.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReadQuestionServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadQuestionServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="380">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBHelper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/DBHelper.java">
+      <file leaf-file-name="QuestionDBHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-              <folding>
-                <element signature="e#4554#4555#0" expanded="true" />
-                <element signature="e#4622#4623#0" expanded="true" />
-                <element signature="e#4673#4674#0" expanded="true" />
-                <element signature="e#4741#4742#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="836">
+              <caret line="54" column="105" selection-start-line="54" selection-start-column="105" selection-end-line="54" selection-end-column="105" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteSecretServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteSecretServlet.java">
+      <file leaf-file-name="WriteQuestionServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteQuestionServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/DBHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadSecretCommentServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadSecretCommentServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WriteSecretCommentServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteSecretCommentServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecretCommentDBHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/SecretCommentDBHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadResponseServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadResponseServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -90,6 +121,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/HomeMail/src/main/data/DBHelper.java" />
+        <option value="$PROJECT_DIR$/HomeMail/src/main/common/SecretComment.java" />
+        <option value="$PROJECT_DIR$/HomeMail/src/main/http/ReadSecretCommentServlet.java" />
+        <option value="$PROJECT_DIR$/HomeMail/src/main/http/WriteSecretCommentServlet.java" />
+        <option value="$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java" />
+        <option value="$PROJECT_DIR$/HomeMail/src/main/data/SecretCommentDBHelper.java" />
+        <option value="$PROJECT_DIR$/HomeMail/src/main/http/ReadQuestionServlet.java" />
       </list>
     </option>
   </component>
@@ -121,6 +158,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,6 +219,11 @@
             <path>
               <item name="HomeMailServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeMail" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HomeMailServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HomeMail" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -187,8 +231,6 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,48 +439,49 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527434139097</updated>
-      <workItem from="1527434143392" duration="1553000" />
+      <workItem from="1527434143392" duration="5006000" />
+      <workItem from="1527439403672" duration="43000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1553000" />
+    <option name="totallyTimeSpent" value="5049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32972974" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32972974" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46486485" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32972974" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2545555" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.46486485" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
-      <window_info id="Web" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,16 +491,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteSecretServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/BaseServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="76">
           <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -473,27 +509,153 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HomeMail/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-902" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadQuestionServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="54" column="105" selection-start-line="54" selection-start-column="105" selection-end-line="54" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteQuestionServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadSecretCommentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteSecretCommentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/SecretCommentDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteSecretServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/BaseServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadClapServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/common/SecretComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteSecretCommentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="54" column="105" selection-start-line="54" selection-start-column="105" selection-end-line="54" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadSecretCommentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/SecretCommentDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadResponseServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/DBHelper.java">
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteQuestionServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="e#4554#4555#0" expanded="true" />
-            <element signature="e#4622#4623#0" expanded="true" />
-            <element signature="e#4673#4674#0" expanded="true" />
-            <element signature="e#4741#4742#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="76">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadQuestionServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
         </state>
       </provider>
     </entry>

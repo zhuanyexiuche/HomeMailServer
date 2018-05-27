@@ -2,22 +2,32 @@ package main.data;
 
 import main.common.SecretComment;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Types;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class SecretCommentDBHelper extends DBHelper{
     /*
     1:SID int 2:SContext:String 3:SBriefContext String
-    4:SSID int 5:SIsDeleted boolean
+    4:SSID int 5:SIsDeleted boolean 6:SName String 7:SMood String
      */
     public static final int MAX_LENGTH = 24;
-    private SecretCommentDBHelper(){super("SecretComment","SID",5);}
+    private SecretCommentDBHelper(){super("SecretComment","SID",7);}
     private static SecretCommentDBHelper instance = new SecretCommentDBHelper();
     public static SecretCommentDBHelper getInstance(){return instance;}
+    private static ArrayList<String> nameList = new ArrayList();
+    private static ArrayList<String> moodList = new ArrayList<>();
+    static{
+        nameList.add("Wang_Xiao");
+        nameList.add("Hong_Xiao");
+        nameList.add("Feng_Double_Chou");
+
+        moodList.add("Happy");
+        moodList.add("Happier");
+        moodList.add("Happiest");
+    }
     public void add(SecretComment r){
+        r.setName(nameList.get((int)Math.random()*nameList.size()));
+        r.setMood(moodList.get((int)(Math.random()*moodList.size())));
         PreparedStatement stat = this.getInsertStat();
         try {
             stat.setNull(1, Types.INTEGER);
@@ -25,6 +35,8 @@ public class SecretCommentDBHelper extends DBHelper{
             stat.setString(3,r.getBriefContext());
             stat.setInt(4,r.getSID());
             stat.setBoolean(5,false);
+            stat.setString(6,r.getName());
+            stat.setString(7,r.getMood());
             stat.execute();
             SecretDBHelper.getInstance().resp(r.getSID(),1);
         } catch (SQLException e) {
@@ -59,6 +71,8 @@ public class SecretCommentDBHelper extends DBHelper{
            q.setSID(set.getInt("SSID"));
            q.setContext(set.getString("SContext"));
            q.setBriefContext(set.getString("SBriefContext"));
+           q.setName(set.getString("SName"));
+           q.setMood(set.getString("SMood"));
         } catch (SQLException e) {
             e.printStackTrace();
         }finally{
@@ -89,7 +103,7 @@ public class SecretCommentDBHelper extends DBHelper{
         ArrayList<SecretComment> res = new ArrayList<>();
         try {
             PreparedStatement stat = this.getConn().prepareStatement(
-                    "Select SID,SBriefContext,SContext,SSID From "+this.TABLE_NAME+" Where SSID = ?&&SIsDeleted=false"
+                    "Select SID,SBriefContext,SContext,SSID,SName,SMood From "+this.TABLE_NAME+" Where SSID = ?&&SIsDeleted=false"
             );
             stat.setInt(1,SSID);
             ResultSet set = stat.executeQuery();

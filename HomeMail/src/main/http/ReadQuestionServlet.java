@@ -28,7 +28,7 @@ public class ReadQuestionServlet extends BaseServlet{
                 cont+="{";
                 cont+="\"ID\":"+q.getID()+",";
                 cont+="\"topic\":"+"\""+q.getTopic()+"\""+",";
-//                cont+="\"context\":"+"\""+q.getContext()+"\""+",";
+                cont+="\"briefContext\":"+"\""+q.getContext()+"\""+",";
                 cont+="\"respCount\":"+q.getRespCount()+",";
                 cont+="\"clapCount\":"+q.getClapCount();
                 cont+="},";
