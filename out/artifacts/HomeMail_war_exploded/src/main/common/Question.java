@@ -4,6 +4,23 @@ public class Question {
     private int ID,respCount,clapCount;
     private String topic,context;
     private boolean isDeleted;
+    private String owner,ownerAvater;
+
+    public String getOwnerAvater() {
+        return ownerAvater;
+    }
+
+    public void setOwnerAvater(String ownerAvater) {
+        this.ownerAvater = ownerAvater;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
 
     public int getID() {
         return ID;

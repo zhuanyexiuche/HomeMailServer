@@ -94,7 +94,7 @@ public class QuestionDBHelper extends DBHelper {
         ArrayList<Question> res = new ArrayList<>();
         try {
             PreparedStatement stat = this.getConn().prepareStatement(
-                    "Select QID,QTopic,QRespCount,QClapCount From "+this.TABLE_NAME+" where QIsDeleted = false"
+                    "Select * From "+this.TABLE_NAME+" where QIsDeleted = false"
             );
             ResultSet set = stat.executeQuery();
             while (set.next()){

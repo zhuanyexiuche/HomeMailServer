@@ -30,6 +30,8 @@ public class ReadQuestionServlet extends BaseServlet{
                 cont+="\"topic\":"+"\""+q.getTopic()+"\""+",";
                 cont+="\"briefContext\":"+"\""+q.getContext()+"\""+",";
                 cont+="\"respCount\":"+q.getRespCount()+",";
+                cont+="\"owner\":\""+q.getOwner()+"\",";
+                cont+="\"ownerAvater\":\""+q.getOwnerAvater()+"\",";
                 cont+="\"clapCount\":"+q.getClapCount();
                 cont+="},";
             }
@@ -46,6 +48,8 @@ public class ReadQuestionServlet extends BaseServlet{
             cont+="\"topic\":"+"\""+q.getTopic()+"\""+",";
             cont+="\"context\":"+"\""+q.getContext()+"\""+",";
             cont+="\"respCount\":"+q.getRespCount()+",";
+            cont+="\"owner\":\""+q.getOwner()+"\",";
+            cont+="\"ownerAvater\":\""+q.getOwnerAvater()+"\",";
             cont+="\"clapCount\":"+q.getClapCount();
             cont+="}";
             writer.write(cont);

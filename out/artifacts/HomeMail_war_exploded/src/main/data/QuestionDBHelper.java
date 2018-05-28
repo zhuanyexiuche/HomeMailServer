@@ -13,12 +13,12 @@ import java.util.Collections;
 public class QuestionDBHelper extends DBHelper {
     /*
     1:QID int (auto) 2:QTopic String 3:QContext String 4:QRespCount int 5:QClapCount int
-    6:QIsDeleted boolean
+    6:QIsDeleted boolean 7QOwner:String 8 QOwnerAvater :String
      */
     private static QuestionDBHelper instance = new QuestionDBHelper();
     public static QuestionDBHelper getInstance(){return instance;}
     private QuestionDBHelper(){
-        super("Question","QID",6);
+        super("Question","QID",8);
     }
     public void add(Question q){
         PreparedStatement stat = this.getInsertStat();
@@ -29,6 +29,8 @@ public class QuestionDBHelper extends DBHelper {
             stat.setInt(4,q.getRespCount());
             stat.setInt(5,q.getClapCount());
             stat.setBoolean(6,q.isDeleted());
+            stat.setString(7,q.getOwner());
+            stat.setString(8,q.getOwnerAvater());
             stat.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -51,6 +53,8 @@ public class QuestionDBHelper extends DBHelper {
             q.setTopic(set.getString("QTopic"));
             q.setRespCount(set.getInt("QRespCount"));
             q.setClapCount(set.getInt("QClapCount"));
+            q.setOwner(set.getString("QOwner"));
+            q.setOwnerAvater(set.getString("QOwnerAvater"));
             String context =set.getString("Qcontext");
             q.setContext(context.substring(0,Math.min(20,context.length()))+(context.length()>20?"...":""));
         } catch (SQLException e) {
@@ -90,7 +94,7 @@ public class QuestionDBHelper extends DBHelper {
         ArrayList<Question> res = new ArrayList<>();
         try {
             PreparedStatement stat = this.getConn().prepareStatement(
-                    "Select QID,QTopic,QRespCount,QClapCount From "+this.TABLE_NAME+" where QIsDeleted = false"
+                    "Select * From "+this.TABLE_NAME+" where QIsDeleted = false"
             );
             ResultSet set = stat.executeQuery();
             while (set.next()){

@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="HomeMail:war" />
       <artifact name="HomeMail:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="157defbf-88aa-46aa-a8f9-ef542223847a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeMail/src/main/common/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/common/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeMail/src/main/http/ReadQuestionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/http/ReadQuestionServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeMail/src/main/http/WriteQuestionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeMail/src/main/http/WriteQuestionServlet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,20 +33,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuestionDBHelper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QuestionDBHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="93" column="52" lean-forward="true" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
+            <state relative-caret-position="71">
+              <caret line="87" column="32" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteQuestionServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WriteQuestionServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteQuestionServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="228">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -115,10 +110,10 @@
         <option value="$PROJECT_DIR$/HomeMail/src/main/http/WriteSecretCommentServlet.java" />
         <option value="$PROJECT_DIR$/HomeMail/src/main/data/SecretCommentDBHelper.java" />
         <option value="$PROJECT_DIR$/HomeMail/src/main/common/Question.java" />
-        <option value="$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java" />
         <option value="$PROJECT_DIR$/HomeMail/src/main/http/ReadResponseServlet.java" />
         <option value="$PROJECT_DIR$/HomeMail/src/main/http/ReadQuestionServlet.java" />
         <option value="$PROJECT_DIR$/HomeMail/src/main/http/WriteQuestionServlet.java" />
+        <option value="$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java" />
       </list>
     </option>
   </component>
@@ -433,42 +428,41 @@
       <updated>1527434139097</updated>
       <workItem from="1527434143392" duration="5006000" />
       <workItem from="1527439403672" duration="709000" />
-      <workItem from="1527500766539" duration="655000" />
+      <workItem from="1527500766539" duration="1143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6370000" />
+    <option name="totallyTimeSpent" value="6858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32972974" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.46486485" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32972974" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2573164" />
-      <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46486485" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32972974" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2573164" />
+      <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -691,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="93" column="52" lean-forward="true" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/ReadResponseServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -714,8 +701,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HomeMail/src/main/http/WriteQuestionServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="228">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeMail/src/main/data/QuestionDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="87" column="32" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
         </state>
       </provider>
     </entry>
