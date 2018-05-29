@@ -10,15 +10,20 @@ import java.util.ArrayList;
 
 /*
 1:SID int 2:SContext String 3:SBriefContext String 4:SRespCount int 5:SIsDeleted boolean
+6：SName String 7:SMood String
  */
 public class SecretDBHelper extends DBHelper {
     public static final int MAX_LENGTH = 24;
     public static SecretDBHelper getInstance(){return instance;}
     private static SecretDBHelper instance = new SecretDBHelper();
     private SecretDBHelper(){
-        super("Secret","SID",5);
+        super("Secret","SID",7);
     }
+    public static ArrayList<String> nameList = SecretCommentDBHelper.nameList;
+    public static ArrayList<String> moodList = SecretCommentDBHelper.moodList;
     public void add(Secret s){
+        s.setName(nameList.get((int)Math.random()*nameList.size()));
+        s.setMood(moodList.get((int)Math.random()*moodList.size()));
         PreparedStatement stat = this.getInsertStat();
         try {
             stat.setNull(1, Types.INTEGER);
@@ -26,6 +31,8 @@ public class SecretDBHelper extends DBHelper {
             stat.setString(3,s.getBriefContext());
             stat.setInt(4,0);
             stat.setBoolean(5,false);
+            stat.setString(6,s.getName());
+            stat.setString(7,s.getMood());
             stat.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -37,6 +44,8 @@ public class SecretDBHelper extends DBHelper {
             s.setID(set.getInt("SID"));
             s.setBriefContext(set.getString("SBriefContext"));
             s.setRespCount(set.getInt("SRespCount"));
+            s.setName(set.getString("SName"));
+            s.setMood(set.getString("SMood"));
 //            s.setDeleted(set.getBoolean("SIsDeleted"));
         } catch (SQLException e) {
             e.printStackTrace();
@@ -58,7 +67,7 @@ public class SecretDBHelper extends DBHelper {
         ArrayList<Secret> res = new ArrayList<>();
         try {
             PreparedStatement stat = this.getConn().prepareStatement(
-                    "Select SID,SBriefContext,SRespCount From "+this.TABLE_NAME+" Where SIsDeleted =false"
+                    "Select * From "+this.TABLE_NAME+" Where SIsDeleted =false"
             );
             ResultSet set = stat.executeQuery();
             while (set.next()){

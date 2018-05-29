@@ -4,6 +4,23 @@ public class Secret {
     private int ID,respCount;
     private String context,briefContext;
     private boolean isDeleted;
+    private String name,mood;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMood() {
+        return mood;
+    }
+
+    public void setMood(String mood) {
+        this.mood = mood;
+    }
 
     public int getID() {
         return ID;

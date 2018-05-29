@@ -14,8 +14,8 @@ public class SecretCommentDBHelper extends DBHelper{
     private SecretCommentDBHelper(){super("SecretComment","SID",7);}
     private static SecretCommentDBHelper instance = new SecretCommentDBHelper();
     public static SecretCommentDBHelper getInstance(){return instance;}
-    private static ArrayList<String> nameList = new ArrayList();
-    private static ArrayList<String> moodList = new ArrayList<>();
+    public static ArrayList<String> nameList = new ArrayList();
+    public static ArrayList<String> moodList = new ArrayList<>();
     static{
         nameList.add("Wang_Xiao");
         nameList.add("Hong_Xiao");

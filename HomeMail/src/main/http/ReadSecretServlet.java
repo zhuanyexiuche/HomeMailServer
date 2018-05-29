@@ -30,6 +30,8 @@ public class ReadSecretServlet extends BaseServlet {
                 cont+="{";
                 cont+="\"ID\":"+q.getID()+",";
                 cont+="\"briefContext\":"+"\""+q.getBriefContext()+"\""+",";
+                cont+="\"name\":"+"\""+q.getName()+"\""+",";
+                cont+="\"mood\":"+"\""+q.getMood()+"\",";
                 cont+="\"respCount\":"+q.getRespCount();
                 cont+="},";
             }
@@ -46,6 +48,8 @@ public class ReadSecretServlet extends BaseServlet {
             cont+="\"ID\":"+q.getID()+",";
             cont+="\"context\":"+"\""+q.getContext()+"\""+",";
             cont+="\"briefContext\":"+"\""+q.getBriefContext()+"\""+",";
+            cont+="\"name\":"+"\""+q.getName()+"\""+",";
+            cont+="\"mood\":"+"\""+q.getMood()+"\",";
             cont+="\"respCount\":"+q.getRespCount();
             cont+="}";
             writer.write(cont);
