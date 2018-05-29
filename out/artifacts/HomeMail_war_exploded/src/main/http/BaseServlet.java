@@ -9,7 +9,8 @@ import java.io.IOException;
 public abstract class BaseServlet extends HttpServlet{
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=utf-8");
+        resp.setCharacterEncoding("UTF-8");
+        resp.setContentType("application/json; charset=utf-8");
         resp.setHeader("Access-Control-Allow-Origin", "*");
         resp.setHeader("Access-Control-Allow-Methods", "GET,POST");
         work(req,resp);
